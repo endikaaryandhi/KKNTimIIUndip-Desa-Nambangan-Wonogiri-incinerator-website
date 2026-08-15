@@ -1,0 +1,166 @@
+/* ============================
+   Flipbook & PDF Section Styles
+   ============================ */
+
+.flipbook-section {
+  background: var(--clr-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative corner shapes */
+.flipbook-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: hsla(350, 60%, 75%, 0.12);
+  pointer-events: none;
+}
+
+.flipbook-section::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: hsla(150, 45%, 65%, 0.12);
+  pointer-events: none;
+}
+
+/* Tabs Switcher */
+.viewer-tabs {
+  display: flex;
+  background: hsl(35, 30%, 93%);
+  border-bottom: 2px solid var(--clr-border-light);
+  padding: var(--space-xs) var(--space-md);
+  gap: var(--space-xs);
+}
+
+.viewer-tab {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background: transparent;
+  color: var(--clr-text-secondary);
+  font-weight: 700;
+  font-size: var(--font-sm);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.viewer-tab:hover {
+  background: hsla(30, 30%, 50%, 0.08);
+  color: var(--clr-text);
+  transform: translateY(-1px);
+}
+
+.viewer-tab.active {
+  background: var(--clr-surface);
+  color: var(--clr-primary-dark);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--clr-border-light);
+}
+
+/* Tab Content & Iframes */
+.viewer-tab-content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 50px);
+}
+
+.iframe-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.viewer-iframe {
+  width: 100%;
+  flex: 1;
+  border: none;
+  background: #fbfbfb;
+  min-height: 480px;
+}
+
+.iframe-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-xl);
+  background: hsl(35, 45%, 97%);
+  border-top: 2px dashed var(--clr-border-light);
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.viewer-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-xl);
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+  color: white !important;
+  font-weight: 700;
+  font-size: var(--font-sm);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px hsla(24, 70%, 55%, 0.25);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.viewer-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsla(24, 70%, 55%, 0.35);
+  background: linear-gradient(135deg, var(--clr-primary-light), var(--clr-primary));
+}
+
+.viewer-btn-primary:active {
+  transform: translateY(0);
+}
+
+.viewer-hint {
+  font-size: 11px;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+  margin: 0;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .viewer-tabs {
+    flex-direction: column;
+    padding: var(--space-xs);
+  }
+
+  .viewer-tab {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-xs);
+  }
+
+  .viewer-iframe {
+    min-height: 380px;
+  }
+
+  .iframe-actions {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .viewer-btn-primary {
+    padding: var(--space-xs) var(--space-lg);
+    font-size: var(--font-xs);
+  }
+}
