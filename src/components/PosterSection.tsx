@@ -26,7 +26,6 @@ const posters: PosterItem[] = [
       "Kelompok paling rentan: Anak-anak, Lansia, Ibu Hamil, & Penderita Asma",
       "Dampak kesehatan: Iritasi mata/tenggorokan, gangguan pernapasan, risiko jantung & penurunan daya tahan tubuh",
       "Solusi: Gunakan incinerator sederhana untuk pembakaran terkendali & minim asap",
-      "Edukasi pemilahan: Jangan bakar sampah plastik, karet, baterai, atau bahan B3"
     ]
   },
   {

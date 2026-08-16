@@ -6,7 +6,6 @@ const navLinks = [
   { id: "flipbook", label: "Panduan" },
   { id: "poster-section", label: "Poster & Infografis" },
   { id: "rab", label: "RAB" },
-  { id: "waste-info", label: "Info Sampah" },
 ];
 
 export default function Navbar() {
@@ -60,7 +59,7 @@ export default function Navbar() {
           }}
         >
           <span className="navbar-logo-icon">🔥</span>
-          <span>Pijar</span>
+          <span>Sinergi Api</span>
         </a>
 
         <div className={`navbar-links ${mobileOpen ? "open" : ""}`}>

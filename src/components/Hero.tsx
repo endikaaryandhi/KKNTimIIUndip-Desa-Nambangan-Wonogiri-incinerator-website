@@ -90,25 +90,6 @@ export default function Hero() {
               💰 Lihat RAB
             </button>
           </div>
-
-          <div className="hero-stats">
-            <div className="hero-stat-item">
-              <span className="hero-stat-value">55 bh</span>
-              <span className="hero-stat-label">Bata Hebel</span>
-            </div>
-            <div className="hero-stat-item">
-              <span className="hero-stat-value">1 Hari</span>
-              <span className="hero-stat-label">Pembuatan</span>
-            </div>
-            <div className="hero-stat-item">
-              <span className="hero-stat-value">Skala</span>
-              <span className="hero-stat-label">Rumah Tangga</span>
-            </div>
-            <div className="hero-stat-item">
-              <span className="hero-stat-value">UNDIP</span>
-              <span className="hero-stat-label">KKN TIM II 2026</span>
-            </div>
-          </div>
         </div>
 
         <div className="hero-illustration">
@@ -119,13 +100,6 @@ export default function Hero() {
             height="340"
           />
         </div>
-      </div>
-
-      <div className="hero-scroll-indicator">
-        <div className="hero-scroll-mouse">
-          <div className="hero-scroll-dot" />
-        </div>
-        <span className="hero-scroll-text">Scroll</span>
       </div>
     </section>
   );

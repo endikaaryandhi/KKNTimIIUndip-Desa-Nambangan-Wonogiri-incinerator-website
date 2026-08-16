@@ -1,5 +1,5 @@
 /* ============================
-   Flipbook & PDF Section Styles
+   Flipbook Section Styles
    ============================ */
 
 .flipbook-section {
@@ -33,50 +33,11 @@
   pointer-events: none;
 }
 
-/* Tabs Switcher */
-.viewer-tabs {
-  display: flex;
-  background: hsl(35, 30%, 93%);
-  border-bottom: 2px solid var(--clr-border-light);
-  padding: var(--space-xs) var(--space-md);
-  gap: var(--space-xs);
-}
-
-.viewer-tab {
-  flex: 1;
-  padding: var(--space-sm) var(--space-md);
-  border: none;
-  background: transparent;
-  color: var(--clr-text-secondary);
-  font-weight: 700;
-  font-size: var(--font-sm);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xs);
-}
-
-.viewer-tab:hover {
-  background: hsla(30, 30%, 50%, 0.08);
-  color: var(--clr-text);
-  transform: translateY(-1px);
-}
-
-.viewer-tab.active {
-  background: var(--clr-surface);
-  color: var(--clr-primary-dark);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--clr-border-light);
-}
-
-/* Tab Content & Iframes */
-.viewer-tab-content {
+/* Flipbook Content & Iframes */
+.viewer-flipbook-content {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 50px);
+  height: 100%;
 }
 
 .iframe-container {
@@ -91,7 +52,7 @@
   flex: 1;
   border: none;
   background: #fbfbfb;
-  min-height: 480px;
+  min-height: 520px;
 }
 
 .iframe-actions {
@@ -141,18 +102,8 @@
 }
 
 @media (max-width: 768px) {
-  .viewer-tabs {
-    flex-direction: column;
-    padding: var(--space-xs);
-  }
-
-  .viewer-tab {
-    padding: var(--space-xs) var(--space-sm);
-    font-size: var(--font-xs);
-  }
-
   .viewer-iframe {
-    min-height: 380px;
+    min-height: 400px;
   }
 
   .iframe-actions {

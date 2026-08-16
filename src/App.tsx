@@ -3,7 +3,6 @@ import Hero from "./components/Hero";
 import Flipbook from "./components/Flipbook";
 import PosterSection from "./components/PosterSection";
 import RABSection from "./components/RABSection";
-import WasteInfo from "./components/WasteInfo";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -15,7 +14,6 @@ export default function App() {
         <Flipbook />
         <PosterSection />
         <RABSection />
-        <WasteInfo />
       </main>
       <Footer />
     </>

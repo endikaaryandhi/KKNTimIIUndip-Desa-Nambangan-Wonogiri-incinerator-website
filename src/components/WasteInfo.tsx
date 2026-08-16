@@ -1,71 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import {
   wasteTypes,
   processSteps,
-  statistics,
   faqItems,
 } from "../data/wasteInfoData";
 import ViewerFrame from "./ViewerFrame";
 import "../styles/wasteinfo.css";
-
-function AnimatedStat({
-  value,
-  suffix,
-  icon,
-  label,
-}: {
-  value: number;
-  suffix: string;
-  icon: string;
-  label: string;
-}) {
-  const [displayValue, setDisplayValue] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const animated = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !animated.current) {
-            animated.current = true;
-            const duration = 1500;
-            const steps = 50;
-            const interval = duration / steps;
-            let step = 0;
-
-            const timer = setInterval(() => {
-              step++;
-              const progress = step / steps;
-              const eased = 1 - Math.pow(1 - progress, 3);
-              setDisplayValue(Math.round(value * eased));
-
-              if (step >= steps) {
-                clearInterval(timer);
-                setDisplayValue(value);
-              }
-            }, interval);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [value]);
-
-  return (
-    <div className="viewer-waste-stat" ref={ref}>
-      <div className="viewer-waste-stat-icon">{icon}</div>
-      <div className="viewer-waste-stat-value">
-        {displayValue}
-        {suffix}
-      </div>
-      <div className="viewer-waste-stat-label">{label}</div>
-    </div>
-  );
-}
 
 function FAQSection() {
   const [openId, setOpenId] = useState<number | null>(null);
@@ -121,19 +61,6 @@ export default function WasteInfo() {
           statusLeft={`${processSteps.length} proses · ${wasteTypes.length} jenis sampah · ${faqItems.length} FAQ`}
           statusRight="IncinPro v1.0"
         >
-          {/* Stats */}
-          <div className="viewer-waste-stats">
-            {statistics.map((stat) => (
-              <AnimatedStat
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                icon={stat.icon}
-                label={stat.label}
-              />
-            ))}
-          </div>
-
           {/* Process */}
           <h3 className="viewer-waste-process-title">
             🔄 Alur Proses Pengolahan Sampah

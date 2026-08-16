@@ -1,32 +1,22 @@
-# React + TypeScript + Vite
+# 🔥 Pijar — Incinerator Sederhana Bata Ringan
+### Program KKN TIM II Universitas Diponegoro 2026 · Desa Nambangan
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Platform web edukasi dan panduan terpadu mengenai pembangunan serta pengoperasian **Incinerator Sederhana Bata Ringan (Hebel)** sebagai solusi pengelolaan sampah rumah tangga yang terarah, aman, dan ramah lingkungan.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Fitur Utama
 
-## React Compiler
+- 📖 **Buku Panduan Digital (Flipbook & PDF)**: Integrasi FlipHTML5 interaktif dan PDF Viewer untuk membaca modul panduan pembuatan & pemeliharaan incinerator.
+- 🖼️ **Poster & Infografis Edukasi**: Penampil dokumen PDF untuk poster bahaya asap pembakaran terbuka, pelestarian ekosistem sungai, dan landasan hukum UU No. 18/2008.
+- 💰 **Kalkulator & Spreadsheet RAB**: Estimasi Rencana Anggaran Biaya pembuatan alat dengan fitur pengali unit (*multiplier*) dinamis.
+- ♻️ **Modul Pengolahan & Pemilahan Sampah**: Panduan jenis sampah yang boleh/tidak boleh dibakar, alur proses pembakaran, statistik efektivitas, serta FAQ.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Teknologi yang Digunakan
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- **Frontend**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Bundler & Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS (Modern Design System, Glassmorphism, Micro-animations)
+- **Linter**: [Oxlint](https://oxc.rs/)

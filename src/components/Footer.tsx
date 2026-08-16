@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="footer-logo">
               <span className="footer-logo-icon">🔥</span>
-              <span>Pijar</span>
+              <span>Sinergi Api</span>
             </div>
             <p className="footer-brand-desc">
               Solusi pengelolaan sampah modern dengan teknologi incinerator yang
@@ -41,18 +41,12 @@ export default function Footer() {
             <button className="footer-col-link" onClick={() => scrollTo("rab")}>
               RAB
             </button>
-            <button
-              className="footer-col-link"
-              onClick={() => scrollTo("waste-info")}
-            >
-              Info Sampah
-            </button>
           </div>
         </div>
 
         <div className="footer-bottom">
           <span className="footer-copyright">
-            © 2026 IncinPro. Hak cipta dilindungi undang-undang.
+            © 2026 Sinergi Api. Hak cipta dilindungi undang-undang.
           </span>
         </div>
       </div>

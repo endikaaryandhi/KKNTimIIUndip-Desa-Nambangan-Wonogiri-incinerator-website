@@ -10,7 +10,7 @@ import "../styles/rab.css";
 export default function RABSection() {
   const [multiplier, setMultiplier] = useState(1);
   const [openCategories, setOpenCategories] = useState<Set<number>>(
-    new Set([0])
+    new Set([0, 1])
   );
   const [animatedTotals, setAnimatedTotals] = useState<Map<string, number>>(
     new Map()
@@ -99,7 +99,7 @@ export default function RABSection() {
           <span className="section-badge">💰 RAB</span>
           <h2 className="section-title">Rencana Anggaran Biaya</h2>
           <p className="section-subtitle">
-            Estimasi biaya pembuatan incinerator sederhana bata ringan.
+            Rincian anggaran biaya pembuatan incinerator sederhana bata ringan Desa Nambangan.
           </p>
         </div>
 
@@ -184,11 +184,12 @@ export default function RABSection() {
                   <thead>
                     <tr>
                       <th>No</th>
-                      <th>Uraian</th>
-                      <th>Satuan</th>
-                      <th className="text-right">Vol</th>
-                      <th className="text-right">Harga Satuan</th>
+                      <th>Uraian Penggunaan Dana</th>
                       <th className="text-right">Jumlah</th>
+                      <th className="text-right">Harga Satuan</th>
+                      <th>Satuan</th>
+                      <th className="text-right">Total</th>
+                      <th>Keterangan</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -196,18 +197,19 @@ export default function RABSection() {
                       <tr key={item.id}>
                         <td>{idx + 1}</td>
                         <td>{item.item}</td>
-                        <td>{item.satuan}</td>
                         <td className="text-right">
                           {(item.volume * multiplier).toLocaleString("id-ID")}
                         </td>
                         <td className="text-right">
                           {formatRupiah(item.hargaSatuan)}
                         </td>
+                        <td>{item.satuan}</td>
                         <td className="text-right subtotal">
                           {formatRupiah(
                             item.volume * item.hargaSatuan * multiplier
                           )}
                         </td>
+                        <td className="text-muted">{item.keterangan || "-"}</td>
                       </tr>
                     ))}
                   </tbody>
